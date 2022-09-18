@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c573bcd5e0b9b7a4ba5fe4ae2363acb8, type: 3}
+  m_Name: New Chracter Database
+  m_EditorClassIdentifier: 
+  character:
+  - characterName: Red Riding Hood
+    characterSprite: {fileID: 2767004470960857696, guid: 90007978e017e9240aed827e41c18d19, type: 3}
+    characterDescription: "\u0E44\u0E21\u0E48\u0E21\u0E35\u0E04\u0E27\u0E32\u0E21\u0E2A\u0E32\u0E21\u0E32\u0E23\u0E16\u0E1E\u0E34\u0E40\u0E28\u0E29"
+    unlockcharacter: 1
+  - characterName: Hot Summer Girl
+    characterSprite: {fileID: 6592393826451688419, guid: 367aed65c8dac7b4191c14da9e912ed7, type: 3}
+    characterDescription: "\u0E17\u0E33\u0E43\u0E2B\u0E49\u0E04\u0E27\u0E32\u0E21\u0E40\u0E23\u0E47\u0E27\u0E40\u0E01\u0E21\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E02\u0E36\u0E49\u0E19"
+    unlockcharacter: 0
+  - characterName: The Gambler
+    characterSprite: {fileID: -6024098822437314960, guid: 53616ba9730ec1740a92bfd9e022726f, type: 3}
+    characterDescription: "\u0E44\u0E14\u0E49\u0E23\u0E31\u0E1A\u0E40\u0E2B\u0E23\u0E35\u0E22\u0E0D\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E02\u0E36\u0E49\u0E19
+      2 \u0E40\u0E17\u0E48\u0E32"
+    unlockcharacter: 0
+  - characterName: Black Cat Girl
+    characterSprite: {fileID: -4516932859396049006, guid: 255a77f08a756454e946b5ee2cfa74df, type: 3}
+    characterDescription: "\u0E21\u0E35\u0E42\u0E2D\u0E01\u0E32\u0E2A\u0E2B\u0E25\u0E1A\u0E28\u0E31\u0E15\u0E23\u0E39\u0E44\u0E14\u0E49"
+    unlockcharacter: 0
+  - characterName: Ms.Santy
+    characterSprite: {fileID: 6916351871641381496, guid: 6905206b612bed344b1b2050a7f6926e, type: 3}
+    characterDescription: "\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E42\u0E2D\u0E01\u0E32\u0E2A\u0E1E\u0E1A\u0E44\u0E2D\u0E40\u0E17\u0E47\u0E21\u0E2A\u0E38\u0E48\u0E21"
+    unlockcharacter: 0
+  - characterName: Angelica
+    characterSprite: {fileID: 4273636134480651713, guid: fa1b27a0c43ee8749856b192ac8b4d8e, type: 3}
+    characterDescription: "\u0E40\u0E21\u0E37\u0E48\u0E2D\u0E40\u0E25\u0E37\u0E2D\u0E14\u0E2B\u0E21\u0E14\u0E2A\u0E32\u0E21\u0E32\u0E23\u0E16\u0E04\u0E37\u0E19\u0E0A\u0E35\u0E1E\u0E44\u0E14\u0E49
+      1 \u0E04\u0E23\u0E31\u0E49\u0E07\u0E42\u0E14\u0E22\u0E40\u0E2B\u0E25\u0E37\u0E2D\u0E40\u0E25\u0E37\u0E2D\u0E14
+      1 \u0E43\u0E19 3"
+    unlockcharacter: 0
+  - characterName: Cuite Witchy
+    characterSprite: {fileID: 8353553785612699578, guid: 717588f5401d03f498fc154d1142175a, type: 3}
+    characterDescription: "\u0E21\u0E35\u0E17\u0E48\u0E32\u0E42\u0E08\u0E21\u0E15\u0E35\u0E1E\u0E34\u0E40\u0E28\u0E29"
+    unlockcharacter: 0
+  - characterName: Ducky
+    characterSprite: {fileID: 8868729072188591806, guid: 00d23da42c6b29c4b8ec3522b33bd893, type: 3}
+    characterDescription: "\u0E25\u0E14\u0E02\u0E19\u0E32\u0E14\u0E02\u0E2D\u0E07\u0E28\u0E31\u0E15\u0E23\u0E39\u0E41\u0E25\u0E30\u0E21\u0E35\u0E42\u0E2D\u0E01\u0E32\u0E2A\u0E2A\u0E32\u0E1B\u0E28\u0E31\u0E15\u0E23\u0E39\u0E43\u0E2B\u0E49\u0E40\u0E1B\u0E47\u0E19\u0E40\u0E1B\u0E34\u0E14"
+    unlockcharacter: 0
+  - characterName: Gogowa
+    characterSprite: {fileID: -514129739916509198, guid: 2b01da0a5fbbaff4ca9e62bb8af64322, type: 3}
+    characterDescription: "\u0E21\u0E35\u0E42\u0E2D\u0E01\u0E32\u0E2A\u0E17\u0E35\u0E48\u0E28\u0E31\u0E15\u0E23\u0E39\u0E08\u0E30\u0E15\u0E32\u0E22\u0E17\u0E31\u0E19\u0E17\u0E35\u0E40\u0E21\u0E37\u0E48\u0E2D\u0E1C\u0E39\u0E49\u0E40\u0E25\u0E48\u0E19\u0E42\u0E08\u0E21\u0E15\u0E35\u0E42\u0E14\u0E19"
+    unlockcharacter: 0

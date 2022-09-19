@@ -13,7 +13,7 @@ public class WelcomeText : MonoBehaviour
 
     void Update()
     {
-        if(ChraracterScript.gamestarted == true){
+        if(CharacterAnimation.isGamestart == true){
             StartCoroutine(DisplayTextWithDelay(welcometext,"GO!!!",2.0f));
         }
     }

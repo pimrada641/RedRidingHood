@@ -7,7 +7,7 @@ public class BackgroundLoop : MonoBehaviour
     // Start is called before the first frame update
    void Update(){
 
-       if(ChraracterScript.gamestarted == true){
+       if(CharacterAnimation.isGamestart == true){
            if(this.gameObject.name == "Parallex1"){
                transform.position += new Vector3(-4 * Time.deltaTime,0);
            }

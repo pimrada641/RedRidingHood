@@ -6,7 +6,7 @@ public class LoopRandomItem : MonoBehaviour
 {
     void Update()
     {
-        if(ChraracterScript.gamestarted == true){
+        if(CharacterAnimation.isGamestart == true){
             transform.position += new Vector3(-4 * Time.deltaTime,0);
 
             if(this.gameObject.transform.position.x <= -30){

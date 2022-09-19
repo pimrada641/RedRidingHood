@@ -28,12 +28,12 @@ public class EnemyScript : MonoBehaviour//, IUnityAdsLoadListener, IUnityAdsShow
                 EnemyAnim.SetTrigger("Attack");
             }            
             AttackSound.Play();
-            ChraracterScript.HP-=20f;
+            CharacterData.HP-=20f;
         }
     }
 
     public void TakeDamageFunction(){
-        currentHP -= ChraracterScript.AttackDamage;
+        currentHP -= CharacterData.AttackDamage;
         this.transform.parent.position = new Vector2(Mathf.Lerp(transform.parent.position.x,transform.parent.position.x+7,1f),transform.parent.position.y);
         if(currentHP <= 0){
             Debug.Log("die");

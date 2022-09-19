@@ -118,7 +118,7 @@ public class Tutorial : MonoBehaviour
     }
 
     void CheckTutorialAndGenItem(){
-        if (ChraracterScript.gamestarted==true){
+        if (CharacterAnimation.isGamestart==true){
             StoryCharacter.SetActive(false);
 
             if(Flowertutorial == false && TutorialComplete == false){

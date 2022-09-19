@@ -18,7 +18,7 @@ public class ControlCamera : MonoBehaviour
     {
         CinemachineBrain = mainCamera.GetComponent<CinemachineBrain>();
         welcometext.SetText("Ready");
-        character.GetComponent<ChraracterScript>().enabled = false; //ให้ตัวละครขยับไม่ได้
+        character.GetComponent<CharacterAnimation>().enabled = false; //ให้ตัวละครขยับไม่ได้
         finishCamobj.SetActive(true);
         playerCamobj.SetActive(false);
         StartCoroutine(FinishToPlayerCam());
@@ -36,7 +36,7 @@ public class ControlCamera : MonoBehaviour
             ICinemachineCamera finishcam = finishCamobj.GetComponent<ICinemachineCamera>();
             bool finishcamlive = CinemachineCore.Instance.IsLive(finishcam);
             if(!finishcamlive && !isGameStarted){
-                character.GetComponent<ChraracterScript>().enabled = true;
+                character.GetComponent<CharacterAnimation>().enabled = true;
                 StartCoroutine(DisplayTextWithDelay(welcometext,"GO",2.0f));
                 Ingame.TransitionTo(0.1f);
             }

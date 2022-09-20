@@ -14,15 +14,14 @@ public class PetAI : MonoBehaviour
     bool reachedEndOfPoint = false;
     Seeker seeker;
     Rigidbody2D rb;
-    //Collider2D colliderenemy;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        //colliderenemy = GetComponent<Collider2D>();
+    void Awake(){
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-
+    }
+    
+    void Start()
+    {
         InvokeRepeating("UpdatePath",0f,0.5f);
         seeker.StartPath(rb.position,target.position,OnPathComplete);
     }
@@ -34,39 +33,30 @@ public class PetAI : MonoBehaviour
 
     void OnPathComplete(Path p){
         if (!p.error){
-            path = p; currentWayPoint = 0;
+            path = p;
+            currentWayPoint = 0;
         }
     }
 
     void Update(){
-        //rb.MovePosition(this.transform.position);
-        //Debug.Log(rb.position.x);
-        //rb.position=colliderenemy.position;
         if (path == null) return;
-        if(currentWayPoint >= path.vectorPath.Count){
-            Tutorial.TutorialComplete = true;
-            Destroy(rb.gameObject);
-            reachedEndOfPoint = true; return;
-        }else {
-            reachedEndOfPoint = false;
-        }
-
-        Vector2 direction = ((Vector2)path.vectorPath[currentWayPoint] - rb.position).normalized;
-        Vector2 force = direction * speed * Time.deltaTime;
         
-        rb.AddForce(force);
-
-        float distance = Vector2.Distance(rb.position,path.vectorPath[currentWayPoint]);
-
+        if(currentWayPoint >= path.vectorPath.Count){
+            Tutorial.TutorialComplete = reachedEndOfPoint = true;
+            Destroy(rb.gameObject);
+            return;
+        }
+        
+        reachedEndOfPoint = false;
+        rb.AddForce(GetForce());
+        
+        float distance = GetDistance();
         if (distance < nextWayPointDistance){
             currentWayPoint++;
         }
-
-        //if(force.x >= 0.01f){
-          //  transform.localScale = new Vector3(-1,1,1);
-        //}
-        //else if (force.x <= -0.01f){
-          //  transform.localScale = new Vector3(1,1,1);
-        //}
     }
+    Vector2 GetDiffVector() => ((Vector2) path.vectorPath[currentWayPoint] - rb.position);
+    Vector2 GetDirection() => GetDiffVector().normalized;
+    float GetDistance() => GetDiffVector().sqrMagnitude;
+    Vector2 GetForce() => GetDirection() * speed * Time.deltaTime;
 }

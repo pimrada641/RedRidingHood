@@ -45,7 +45,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -293,14 +292,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      RedRiddingHoodImg_1: 486711570106332989
-      RedRiddingHoodImg_3: -4042188285270769492
-      RedRiddingHoodImg_4: 7352847104607215499
-      RedRiddingHoodImg_6: -5077876715348075743
-      RedRiddingHoodImg_2: -5277887851249814443
-      RedRiddingHoodImg_0: -4803586588811265622
-      RedRiddingHoodImg_5: -8899209411249685918
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

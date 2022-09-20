@@ -51,7 +51,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -317,16 +316,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      birds_2: -7018974678055258668
-      birds_3: -2088375843184046732
-      birds_4: 4851551638892312602
-      birds_7: -5939078357884985611
-      birds_8: 8360850287330209547
-      birds_5: 8163329106551660100
-      birds_1: 8465070058091728630
-      birds_6: -3639261379115408741
-      birds_0: -3043212234144720249
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

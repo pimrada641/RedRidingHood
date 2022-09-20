@@ -39,7 +39,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -245,12 +244,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Archangel_0: -1386668537363413738
-      Archangel_2: 4273636134480651713
-      Archangel_4: 2561073033771565107
-      Archangel_1: 6123893138672245925
-      Archangel_3: -2209094680546900496
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

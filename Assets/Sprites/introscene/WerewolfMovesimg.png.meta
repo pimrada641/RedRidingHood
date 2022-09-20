@@ -48,7 +48,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -317,15 +316,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      WerewolfMovesimg_3: -1287142535459341994
-      WerewolfMovesimg_2: -3407165384570971055
-      WerewolfMovesimg_7: -2180824716580991385
-      WerewolfMovesimg_1: 4356788176133106687
-      WerewolfMovesimg_5: -4002197750006157984
-      WerewolfMovesimg_4: 8751468604410889838
-      WerewolfMovesimg_0: -8102588795035013386
-      WerewolfMovesimg_6: 5234995773125061333
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

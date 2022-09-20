@@ -30,7 +30,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -380,20 +379,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      mana potion_4: 8315585094370641915
-      mana potion_10: -5200670651391390577
-      mana potion_3: -35373517460308441
-      mana potion_5: 8156445844902696996
-      mana potion_1: 354539479277234093
-      mana potion_6: -6722333853879726259
-      mana potion_7: 2510009080953468963
-      mana potion_11: -5150855297668234401
-      mana potion_0: 4991566288259375989
-      mana potion_12: 3099664096644349677
-      mana potion_2: 4728502602628058562
-      mana potion_8: 1259869629972312050
-      mana potion_9: -5681737008773437498
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

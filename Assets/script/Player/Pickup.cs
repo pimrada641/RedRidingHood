@@ -7,14 +7,12 @@ using UnityEngine.UI;
 public class Pickup : MonoBehaviour
 {
     public static int PointCount;
-    private static int coinCount;
+    public static int coinCount;
     public static int DiamondCount;
-    public int PointValue = 100;
-    private int CoinValue = 10;
+    public static int PointValue = 100;
+    public static  int CoinValue = 10;
     public TMPro.TMP_Text coinText;
     public TMPro.TMP_Text PointText;
-    public AudioClip coinSound;
-    public AudioClip FlowerSound;
     public GameObject SendOther;
 
     void FixedUpdate()
@@ -27,25 +25,32 @@ public class Pickup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // var tryGetReceiver = other.GetComponent<OnTriggerReceiver>();
+        
         SendOther = other.gameObject;
+
         if (other.CompareTag("Flower"))
         {
-            FlowerTriggered();
+            this.gameObject.GetComponent<TriggerWhenPickup>().FlowerTriggered(SendOther);
+            StartCoroutine(FontSize());
         }
 
         if (other.CompareTag("Bigflower"))
         {
-            BigFlowerTriggered();
+            this.gameObject.GetComponent<TriggerWhenPickup>().BigFlowerTriggered(SendOther);
+            StartCoroutine(FontSize());
         }
 
         if (other.CompareTag("Coin"))
         {
-            CoinTriggered();
+            this.gameObject.GetComponent<TriggerWhenPickup>().CoinTriggered(SendOther);
+            StartCoroutine(FontSize());
         }
 
         if (other.CompareTag("Diamond"))
         {
-            DiamondTriggered();
+            this.gameObject.GetComponent<TriggerWhenPickup>().DiamondTriggered(SendOther); 
+            StartCoroutine(FontSize());
         }
     }
 
@@ -53,58 +58,25 @@ public class Pickup : MonoBehaviour
     {
         if (SendOther.CompareTag("Flower") || (SendOther.CompareTag("Bigflower")))
         {
-            FontSizeDetect(PointText);
+            StartCoroutine(FontSizeDetect(PointText));
         }
 
         if (SendOther.CompareTag("Coin"))
         {
-            FontSizeDetect(coinText);
+            StartCoroutine(FontSizeDetect(coinText));
         }
         yield return null;
     }
 
     IEnumerator FontSizeDetect(TMP_Text objectText)
-        {
-            objectText.fontSize += 10;
-            yield return new WaitForSeconds(0.04f);
-            objectText.fontSize -= 10;
-            Destroy(SendOther.gameObject);
-        }
+    {
+        objectText.fontSize += 10;
+        yield return new WaitForSeconds(0.04f);
+        objectText.fontSize -= 10;
+        DestroyItem();
+    }
 
-        void FlowerTriggered()
-        {
-            AudioSource.PlayClipAtPoint(FlowerSound, SendOther.transform.position);
-            PointCount += PointValue;
-            StartCoroutine(FontSize());
-        }
-
-        void BigFlowerTriggered()
-        {
-            AudioSource.PlayClipAtPoint(FlowerSound, SendOther.transform.position);
-            PointValue = PointValue * 10;
-            PointCount += PointValue;
-            PointValue = PointValue / 10;
-            StartCoroutine(FontSize());
-        }
-
-        void CoinTriggered()
-        {
-            AudioSource.PlayClipAtPoint(coinSound, SendOther.transform.position);
-            coinCount += CoinValue;
-            StartCoroutine(FontSize());
-        }
-
-        void DiamondTriggered()
-        {
-            AudioSource.PlayClipAtPoint(coinSound, SendOther.transform.position);
-            DiamondCount++;
-            Destroy(SendOther.gameObject);
-        }
-
-        public void IncreaseCoin(int numberOfCoin)
-        {
-            coinCount = coinCount + numberOfCoin;
-            PlayerPrefs.SetInt("Coinamout", coinCount);
-            coinText.text = coinCount.ToString();
-        }
+    public void DestroyItem(){
+        Destroy(SendOther);
+    }
 }

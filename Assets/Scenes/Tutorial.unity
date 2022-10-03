@@ -5473,6 +5473,7 @@ GameObject:
   - component: {fileID: 447514074}
   - component: {fileID: 447514076}
   - component: {fileID: 447514073}
+  - component: {fileID: 447514077}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5645,11 +5646,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76825f1c35759e84a8215f17a20e7e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointValue: 100
   coinText: {fileID: 2100091200}
   PointText: {fileID: 1508929990}
   coinSound: {fileID: 8300000, guid: 6df63bb7afffcaa479bce5029705a93d, type: 3}
   FlowerSound: {fileID: 8300000, guid: e8ca045e7f390904aaa053bc7c3c2772, type: 3}
+  SendOther: {fileID: 0}
 --- !u!114 &447514076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5662,6 +5663,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e7ea8cfce04364f90a0f553c858694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &447514077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447514067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53907862fe7c92498d2a740cf82d09b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkinitemDB: {fileID: 11400000, guid: 2ec3cab5e79621a43bbc2e7c45c28fb5, type: 2}
+  coinSound: {fileID: 8300000, guid: 6df63bb7afffcaa479bce5029705a93d, type: 3}
+  FlowerSound: {fileID: 8300000, guid: e8ca045e7f390904aaa053bc7c3c2772, type: 3}
+  onTriggerReceiver: {fileID: 447514077}
 --- !u!4 &448627981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2945254524830318452, guid: b295b3f03d7e30b4aa4cc9a2f65921ff, type: 3}
@@ -12460,7 +12477,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.028564453, y: -0.049865723}
+  m_AnchoredPosition: {x: -0.0000052191, y: 6.1}
   m_SizeDelta: {x: 3907.7, y: 2197.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1102469305
@@ -21915,11 +21932,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76825f1c35759e84a8215f17a20e7e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointValue: 100
   coinText: {fileID: 1508929990}
   PointText: {fileID: 0}
   coinSound: {fileID: 0}
   FlowerSound: {fileID: 0}
+  SendOther: {fileID: 0}
 --- !u!1 &1521454712
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,10 +15,4 @@ public class ChangeAnimator : MonoBehaviour
 
         anim.runtimeAnimatorController = Resources.Load(characterDB.GetCharacter(usedcharacter).characterName) as RuntimeAnimatorController;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

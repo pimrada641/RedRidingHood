@@ -20,6 +20,7 @@ public class HealthBar : MonoBehaviour
         {
             BloodCount(EnemyScript.currentHP);
         }
+        
         if(this.gameObject.CompareTag("Player"))
         {
             BloodCount(ChraracterScript.HP);

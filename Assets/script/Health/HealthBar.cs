@@ -8,7 +8,7 @@ public class HealthBar : MonoBehaviour
     public GameObject gameoverscreen;
     private Image health_Bar;
     public float currentHealth;
-    public float MaxHealth = 100f;
+    private float MaxHealth = 100f;
     void Start()
     {
         health_Bar = GetComponent<Image>();
@@ -20,7 +20,6 @@ public class HealthBar : MonoBehaviour
         {
             BloodCount(EnemyScript.currentHP);
         }
-        
         if(this.gameObject.CompareTag("Player"))
         {
             BloodCount(ChraracterScript.HP);

@@ -22,10 +22,10 @@ public class HealthBar : MonoBehaviour
         }
         if(this.gameObject.CompareTag("Player"))
         {
-            BloodCount(ChraracterScript.HP);
+            BloodCount(EnemyScript.currentHP);
             if(currentHealth == 0)
             {
-              ShowGameOver();
+              BloodCount(CharacterData.HP);
             }
         }
     }
@@ -37,7 +37,7 @@ public class HealthBar : MonoBehaviour
             health_Bar.fillAmount = currentHealth/MaxHealth;
         }
         if(this.gameObject.CompareTag("Player")){
-            currentHealth = ChraracterScript.HP;
+            currentHealth = CharacterData.HP;
             health_Bar.fillAmount = currentHealth/MaxHealth;
             if(currentHealth == 0){
                 gameoverscreen.SetActive(true);

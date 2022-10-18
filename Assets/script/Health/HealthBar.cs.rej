@@ -1,0 +1,9 @@
+diff a/Assets/script/Health/HealthBar.cs b/Assets/script/Health/HealthBar.cs	(rejected hunks)
+@@ -20,6 +20,7 @@
+         {
+             BloodCount(EnemyScript.currentHP);
+         }
++        
+         if(this.gameObject.CompareTag("Player"))
+         {
+             BloodCount(ChraracterScript.HP);

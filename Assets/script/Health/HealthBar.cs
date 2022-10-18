@@ -12,17 +12,32 @@ public class HealthBar : MonoBehaviour
     void Start()
     {
         health_Bar = GetComponent<Image>();
-        
     }
 
     void Update()
+    {
+        if(this.gameObject.CompareTag("Enemy"))
+        {
+            BloodCount(EnemyScript.currentHP);
+        }
+        if(this.gameObject.CompareTag("Player"))
+        {
+            BloodCount(ChraracterScript.HP);
+            if(currentHealth == 0)
+            {
+              ShowGameOver();
+            }
+        }
+    }
+
+    void BloodCount(float currentHP)
     {
         if(this.gameObject.CompareTag("Enemy")){
             currentHealth = EnemyScript.currentHP;
             health_Bar.fillAmount = currentHealth/MaxHealth;
         }
         if(this.gameObject.CompareTag("Player")){
-            currentHealth = CharacterData.HP;
+            currentHealth = ChraracterScript.HP;
             health_Bar.fillAmount = currentHealth/MaxHealth;
             if(currentHealth == 0){
                 gameoverscreen.SetActive(true);
@@ -32,3 +47,4 @@ public class HealthBar : MonoBehaviour
         }
     }
 }
+

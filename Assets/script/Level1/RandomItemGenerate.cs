@@ -15,26 +15,25 @@ public class RandomItemGenerate : MonoBehaviour
     IEnumerator randomItemgen(){
         yield return new WaitForSeconds(4);
         int randomNumber = Random.Range(1,20);
-        if(randomNumber == 1){
-            Debug.Log("Gen1");
-            RandomItem = Instantiate(Prefab2);
-            RandomItem.SetActive(true);
-            
-            StopAllCoroutines();
+        if(randomNumber == 1)
+        {
+            InstantiateItem(Prefab2);
         }
-        else if(randomNumber == 2){
-            Debug.Log("Gen2");
-            RandomItem = Instantiate(Prefab3);
-            RandomItem.SetActive(true);
-            
-            StopAllCoroutines();
+        else if(randomNumber == 2)
+        {
+            InstantiateItem(Prefab3);
         }
-        else{
+        else
+        {
             Debug.Log("Gen3");
-            RandomItem = Instantiate(Prefab1);
-            RandomItem.SetActive(true);
-            
-            StopAllCoroutines();
+            InstantiateItem(Prefab1);
         }
+    }
+
+    void InstantiateItem(GameObject prefab)
+    {
+        RandomItem = Instantiate(prefab);
+        RandomItem.SetActive(true);
+        StopAllCoroutines();
     }
 }

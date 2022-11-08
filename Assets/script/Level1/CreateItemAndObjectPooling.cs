@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class CreateItemAndObjectPooling : MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class CreateItemAndObjectPooling : MonoBehaviour
 
    private GameObject RandomItem(){
        int randomNumber = Random.Range(0,39);
+       var OrderItemList = SkinItemList.OrderBy(it => it).ToList();
+
        GameObject objectafterrandom = SkinItemList[randomNumber];
        SkinItemList.RemoveAt(randomNumber);
 

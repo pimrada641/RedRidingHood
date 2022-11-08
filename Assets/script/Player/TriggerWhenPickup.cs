@@ -53,9 +53,9 @@ public class TriggerWhenPickup : OnTriggerReceiver
     }
 
     void checkSkinItem(GameObject item){
+        
         for(int j=0;j<SkinitemDB.SkinCount;j++){
                 if(item.gameObject.name==SkinitemDB.GetSkin(j).skinname){
-
                     SkinitemDB.GetSkin(j).amount +=1;
                 }
             }
